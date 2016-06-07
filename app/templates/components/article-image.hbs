@@ -1,9 +1,7 @@
-<li>
-  {{article.headline}}
-  {{article.author}}
-  <!-- {{article.image}} -->
+{{currentArticle.headline}}{{currentArticle.author}}
+  {{#link-to 'article'}}
   <p>
-    <img src={{article.image}} alt={{article.headline}} />
+    <img src={{currentArticle.image}} alt={{currentArticle.headline}} />
   </p>
-
-</li>
+  {{/link-to}}
+  <button {{action 'delete' currentArticle}}>Delete</button>
